@@ -1,0 +1,60 @@
+--Data Structures--
+Location
++x-position (px)
++y-position (px)
+
+--Classes--
+ShapeBuilder
++buildRectangle (SVG path)
++buildCircle (SVG path)
++buildArc (SVG path)
++buildLine (SVG path)
+
+Light
+-location (Location)
+-isRound (boolean)
+-isOval (boolean)
+
+RoundLight
+-radius (int)
+
+RectangleLight
+-xLength (int)
+-yLength (int)
+
+Window
+-location (int)
+-length (int)
+
+Door
+-location (int)
+-length (int)
+
+Wall
+-location (Location)
+-length (int)
+-isVertical (boolean)
+-doors (Door[])
+-windows (Window[])
+
+Room
+-location (Location)
+-walls (Wall[])
+-lights (Light[])
++draw (void)
+
+Building
+-rooms (Room[])
+
+
+--Relationships--
+RoundLight is a Light
+RectangleLight is a Light
+
+Wall has a Door
+Wall has a Dindow
+
+Room has a Wall
+Room has a Light
+
+Building has a Room
