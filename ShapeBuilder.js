@@ -2,7 +2,7 @@
  * @description contains functions that build svg rectangles, circles, arcs,
  * and lines.
  ********************************************************************************/
-export class ShapeBuilder {
+class ShapeBuilder {
 
     /*********************************************************************************
      * @description A function that creates a rect object for an svg
@@ -33,7 +33,7 @@ export class ShapeBuilder {
         circle.setAttribute("cx", startLocation.x);
         circle.setAttribute("cy", startLocation.y);
         circle.setAttribute("r", radius - 2);
-        circle.setAttribute("fill", transparent);
+        circle.setAttribute("fill", "transparent");
         circle.setAttribute("stroke-width", 2);
         circle.setAttribute("stroke", "black");
 
@@ -53,7 +53,7 @@ export class ShapeBuilder {
         d = d.join(" "); // form string for path instruction
 
         arc.setAttribute("d", d);
-        arc.setAttribute("fill", transparent);
+        arc.setAttribute("fill", "transparent");
         arc.setAttribute("stroke-width", 2);
         arc.setAttribute("stroke", "black");
 
