@@ -4,7 +4,7 @@ Location
 +y-position (px)
 
 --Classes--
-ShapeBuilder
+Shape
 +buildRectangle (SVG path)
 +buildCircle (SVG path)
 +buildArc (SVG path)
@@ -41,13 +41,15 @@ Room
 -location (Location)
 -walls (Wall[])
 -lights (Light[])
-+draw (void)
-
-Building
--rooms (Room[])
++display (void)
 
 
 --Relationships--
+Light has a Shape
+Window has a Shape
+Door has a Shape
+Wall has a Shape
+
 RoundLight is a Light
 RectangleLight is a Light
 
@@ -56,5 +58,3 @@ Wall has a Dindow
 
 Room has a Wall
 Room has a Light
-
-Building has a Room
